@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1048385531399846138}
   - component: {fileID: 5636423752818324486}
   - component: {fileID: 3224918131458879614}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BolaDeCanhao
   m_TagString: Untagged
   m_Icon: {fileID: 0}

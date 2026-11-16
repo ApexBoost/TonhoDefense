@@ -23,6 +23,8 @@ public class Tower : MonoBehaviour
     public int damage = 1;              // dano por tiro
     public float fireRate = 2f;         // tiros por segundo
     public TargetMode targetMode = TargetMode.First;
+    [Tooltip("Layers que a torre enxerga (a montagem automática marca só a layer Enemy)")]
+    public LayerMask targetLayers = ~0;
 
     [Header("Projétil")]
     public Projectile projectilePrefab;
@@ -49,7 +51,7 @@ public class Tower : MonoBehaviour
     /// <summary>Detecta os zumbis dentro do raio e escolhe um conforme a estratégia.</summary>
     Enemy FindTarget()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range, targetLayers);
 
         Enemy best = null;
         float bestScore = float.NegativeInfinity;

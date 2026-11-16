@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        PhysicsLayers.Apply();  // matriz de colisão 2D (só o necessário)
         Time.timeScale = 0f;    // jogo pausado até apertar "Jogar"
     }
 

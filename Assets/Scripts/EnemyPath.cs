@@ -50,7 +50,7 @@ public class EnemyPath : MonoBehaviour
     void OnDrawGizmos()
     {
         Transform[] pts = (waypoints != null && waypoints.Length > 0) ? waypoints : GetChildren();
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.green;
         for (int i = 0; i < pts.Length; i++)
         {
             if (pts[i] == null) continue;

@@ -10,6 +10,8 @@ public class BuildManager : MonoBehaviour
     [Tooltip("Prefabs das torres, na ordem dos botões (ex.: Torre Básica, Canhão)")]
     public Tower[] towerPrefabs;
     public Camera cam;
+    [Tooltip("Layer dos espaços de construção (TowerSlot)")]
+    public LayerMask slotLayers = ~0;
 
     int selected;
     string message = "";
@@ -41,7 +43,7 @@ public class BuildManager : MonoBehaviour
         Vector2 worldPos = c.ScreenToWorldPoint(screenPos);
 
         // Procura um TowerSlot livre sob o mouse
-        foreach (Collider2D col in Physics2D.OverlapPointAll(worldPos))
+        foreach (Collider2D col in Physics2D.OverlapPointAll(worldPos, slotLayers))
         {
             if (col.TryGetComponent(out TowerSlot slot) && !slot.IsOccupied)
             {
@@ -63,8 +65,8 @@ public class BuildManager : MonoBehaviour
             return;
         }
 
-        Instantiate(prefab, slot.transform.position, Quaternion.identity);
-        slot.Occupy();
+        Tower built = Instantiate(prefab, slot.transform.position, Quaternion.identity);
+        slot.Occupy(built);
     }
 
     void ShowMessage(string text)

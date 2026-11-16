@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2178365258615091965}
   - component: {fileID: 9221549935879758770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TorreBasica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +53,9 @@ MonoBehaviour:
   damage: 1
   fireRate: 2
   targetMode: 0
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 1024
   projectilePrefab: {fileID: 3881590750018774606, guid: 4047a073516212e438b5cd3323d9ea8a, type: 3}
   firePoint: {fileID: 8411945273594330490}
 --- !u!1 &4830226382158180828
@@ -65,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7624512751305442478}
   - component: {fileID: 7943516576780454647}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +84,7 @@ Transform:
   m_GameObject: {fileID: 4830226382158180828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -156,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5948238490090202292}
   - component: {fileID: 1283144345862447935}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Corpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +176,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2178365258615091965}
@@ -246,7 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8411945273594330490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 7393020959077677869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: 0.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
