@@ -1519,6 +1519,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1637450563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1203686500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203686501}
+  m_Layer: 0
+  m_Name: Gameplay_Assets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203686501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203686500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.3174, y: 0.53086, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265224110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,7 +1815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   timeLimit: 180
-  killsToWin: 10
+  killsToWin: 25
   startingMoney: 150
   spawner: {fileID: 1408599796}
 --- !u!114 &1408599796
@@ -1817,6 +1848,24 @@ MonoBehaviour:
       interval: 3
     delayAfter: 5
   - name: Onda 3
+    groups:
+    - prefab: {fileID: 4603791157969373000, guid: e51a39dcfe6cb5c46844a56543627ef9, type: 3}
+      count: 8
+      interval: 1
+    - prefab: {fileID: 229279127135120455, guid: 3a446ec71a7cd5b47b37a42a844e6e95, type: 3}
+      count: 3
+      interval: 2.5
+    delayAfter: 0
+  - name: Onda 4
+    groups:
+    - prefab: {fileID: 4603791157969373000, guid: e51a39dcfe6cb5c46844a56543627ef9, type: 3}
+      count: 8
+      interval: 1
+    - prefab: {fileID: 229279127135120455, guid: 3a446ec71a7cd5b47b37a42a844e6e95, type: 3}
+      count: 3
+      interval: 2.5
+    delayAfter: 0
+  - name: Onda 5
     groups:
     - prefab: {fileID: 4603791157969373000, guid: e51a39dcfe6cb5c46844a56543627ef9, type: 3}
       count: 8
@@ -2091,7 +2140,7 @@ Transform:
   m_GameObject: {fileID: 1598947414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3335,7 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05ef07f2267c0141b17e6073e3ea138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseTonho
-  maxLife: 5
+  maxLife: 7
 --- !u!114 &2132381331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3498,3 +3547,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 195295761}
+  - {fileID: 1203686501}
